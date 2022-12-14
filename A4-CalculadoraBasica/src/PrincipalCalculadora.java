@@ -1,0 +1,56 @@
+public class PrincipalCalculadora {
+
+    public static void menu(){
+        escan.escribirLn("######### MENU PRINCIPAL #########");
+        escan.escribirLn("0- Salir");
+        escan.escribirLn("1- Sumar");
+        escan.escribirLn("2- Restar");
+        escan.escribirLn("3- Multiplicar");
+        escan.escribirLn("4- Dividir");
+    }
+
+    public static int suma(int num1, int num2){
+        int suma=0;
+        suma = num1 + num2;
+        return suma;
+    }
+
+    public static int resta(int num1, int num2){
+        int resta=0;
+        resta = num1 - num2;
+        return resta;
+    }
+
+    public static void main(String[] args) {
+        int num1;
+        int num2;
+        // Tiene que escribirse siempre
+        menu();
+        int opcion = 0;
+        opcion = escan.leerEntero(">> Ingrese una opción");
+        switch ( opcion ){
+            case 0:
+                escan.escribirLn("Adios, vuelva pronto.");
+                break;
+            case 1:
+                escan.escribirLn("##### Vamos a sumar ####");
+                num1 = escan.leerEntero("\tIngrese el primer sumando");
+                num2 = escan.leerEntero("\tIngrese el segundo sumando");
+                escan.escribirLn("La suma de "+ num1 + " + " + num2 + "es: " + suma(num1, num2));
+                break;
+            case 2:
+                escan.escribirLn("##### Vamos a restar ####");
+                num1 = escan.leerEntero("\tIngrese el minuendo");
+                num2 = escan.leerEntero("\tIngrese el sustraendo");
+                escan.escribirLn("La diferencia de "+ num1 + " - " + num2 + "es: " + resta(num1, num2));
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                break;
+        }
+        // Haste este punto deberá repetirse
+    }
+}

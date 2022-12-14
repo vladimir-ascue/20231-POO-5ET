@@ -1,33 +1,7 @@
+
 import java.util.Scanner;
 
 public class PrincipalWhile {
-    public static void escribir(String texto){
-        System.out.print(texto);
-    }
-    public static void escribirLinea(String texto){
-        System.out.println(texto);
-    }
-
-    public static int leerEntero(String mensaje){
-        int entero = 0;
-        Boolean flag = true;
-        Scanner teclado;
-        do {
-            escribir("\t"+mensaje+": ");
-            teclado = new Scanner(System.in);
-            try{
-                entero = teclado.nextInt();
-                flag = false;
-            }catch(Exception e){
-                escribirLinea("Error: Ese no es un entero válido.");
-                escribirLinea("Intentalo nuevamente el proximo año.");
-            }
-        }while (flag);
-
-
-        return entero;
-    }
-
     public static void main(String[] args) {
 //        System.out.println("\tBucle WHILE");
 //        int iterador = 0;
@@ -47,7 +21,15 @@ public class PrincipalWhile {
 //            System.out.println(" iterador2 = " + (iterador2));
 //            iterador2++;
 //        } while( iterador2 < limite2 );
-        int edad = leerEntero("Ingrese su edad");
-        escribirLinea("Su edad es: " + edad);
+        int edad = escan.leerEntero("Ingrese su edad");
+        escan.escribirLn("Su edad es: " + edad);
+
+        int talla = escan.leerEntero("Ingrese su Talla");
+        escan.escribirLn("Su talla es: " + talla);
+
+        System.out.print("Ingrese el numero de años de estudio: ");
+        int estudio = new Scanner(System.in).nextInt();
+
+        estudio = escan.leerEntero("Ingrese el numero de años de estudio: ");
     }
 }
