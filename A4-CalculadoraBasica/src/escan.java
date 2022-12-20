@@ -8,6 +8,8 @@ public class escan {
         System.out.println(texto);
     }
 
+    /* Ejemplito de commit desde la red de khipu */
+
     public static int leerEntero(String mensaje){
         int entero = 0;
         Boolean flag = true;
