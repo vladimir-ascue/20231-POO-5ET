@@ -21,6 +21,12 @@ public class PrincipalCalculadora {
         return resta;
     }
 
+    public static double dividir(int num1, int num2){
+        double cosiente=0;
+        cosiente = num1 / num2;
+        return cosiente;
+    }
+
     public static void main(String[] args) {
         int num1;
         int num2;
@@ -47,6 +53,20 @@ public class PrincipalCalculadora {
             case 3:
                 break;
             case 4:
+                escan.escribirLn("##### Vamos a dividir ####");
+                num1 = escan.leerEntero("\tIngrese el dividendo");
+                num2 = escan.leerEntero("\tIngrese el divisor");
+
+                if (num2 == 0){
+                    // Mostrar menu
+                    //    0- Regresar al menu principal. >>>> Regresa al menu principal
+                    //    1- Ingresar nuevo dividor.  >>>> Se lee un nuevo valor para el divisor y se opera
+                    //           Si se vueleve a inbresar cero ... le escupes en la cara ...
+                }else{
+
+                }
+
+                escan.escribirLn("La diferencia de "+ num1 + " - " + num2 + "es: " + dividir(num1, num2));
                 break;
             default:
                 break;

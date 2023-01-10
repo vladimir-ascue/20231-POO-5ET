@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="396e3311-dc0a-43dc-8be3-39e05749ff9a" name="Changes" comment="Calculadora básica" />
+    <list default="true" id="396e3311-dc0a-43dc-8be3-39e05749ff9a" name="Changes" comment="Calculadora básica actualizacion adicional">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A4-CalculadoraBasica/PrincipalCalculadora.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A4-CalculadoraBasica/PrincipalCalculadora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrincipalCalculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrincipalCalculadora.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,18 +29,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/OneDrive/Documentos/Trabajo/Clientes/khipu/POO/20231 Grupo 5ET/20231-POO-5ET/A4-CalculadoraBasica",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Documentos/Trabajo/Clientes/khipu/POO/20231 Grupo 5ET/20231-POO-5ET/A4-CalculadoraBasica&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,7 +53,11 @@
       <workItem from="1671052938312" duration="98000" />
       <workItem from="1671053093950" duration="23000" />
       <workItem from="1671053144814" duration="21000" />
-      <workItem from="1671053194557" duration="1549000" />
+      <workItem from="1671053194557" duration="1896000" />
+      <workItem from="1671202228532" duration="367000" />
+      <workItem from="1671232888773" duration="2000" />
+      <workItem from="1671568863667" duration="2248000" />
+      <workItem from="1671587840106" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="Calculadora básica">
       <created>1671054474440</created>
@@ -58,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671054474440</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Calculadora básica actualizacion adicional">
+      <created>1671055082361</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671055082361</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Calculadora básica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculadora básica" />
+    <MESSAGE value="Calculadora básica actualizacion adicional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculadora básica actualizacion adicional" />
   </component>
 </project>
