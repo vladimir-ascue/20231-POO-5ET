@@ -1,4 +1,6 @@
-class CFlor {
+import java.util.Scanner;
+
+public class CFlor {
     // ATRIBUTOS - Caracteristicas - Propiedades del objeto de la realidad
     private String nombre;
     private String aroma;
@@ -7,13 +9,14 @@ class CFlor {
     // MÉTODOS
     // M. contructores
     public CFlor(){
-        nombre = null;
-        aroma = null;
-        color = null;
-        precio = 0;
+        nombre = new Scanner(System.in).nextLine();
+        aroma = new Scanner(System.in).nextLine();
+        color = new Scanner(System.in).nextLine();
+        precio = new Scanner(System.in).nextDouble();
     }
 
     public CFlor(String pNombre, String pAroma, String pColor, double pPrecio){
+        System.out.print("Nombre: ");
         nombre = pNombre;
         aroma = pAroma;
         color = pColor;
@@ -57,5 +60,23 @@ class CFlor {
     }
 
     // M. Generales - Comportamiento - Función
+
+    public void mostrar(){
+        System.out.println(" - Nombre: " + this.getNombre());
+        System.out.println(" - Aroma: " + this.getAroma());
+        System.out.println(" - Color: " + this.getColor());
+        System.out.println(" - Precio: " +this.getPrecio());
+    }
+    public void mostrarEnLista(){
+        System.out.print(" - Nombre: " + this.getNombre()+"\t");
+        System.out.print("Aroma: " + this.getAroma()+"\t");
+        System.out.print("Color: " + this.getColor()+"\t");
+        System.out.print("Precio: " +this.getPrecio()+"\t\n");
+    }
+
+    public String formateartexto(String a){
+        // Tareitas
+        return "";
+    }
 
 }
