@@ -1,21 +1,61 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class PrincipalClases {
+
+    public static List<CFlor> floresA = new ArrayList<CFlor>();
+    public static CFlor[] floresB = new CFlor[25];
+
+    public static void menuPrincipal(){
+        System.out.println("0- Salir.");
+        System.out.println("1- Gestionar Flores.");
+        System.out.println("2- Gestionar Vendedores.");
+        System.out.println("3- Gestionar Clientes.");
+        System.out.println("4- Gestionar Documens de venta.");
+    }
+
+    public static void menuFlores(){
+        System.out.println("0- Salir");
+        System.out.println("1- (C) Crear");
+        System.out.println("2- (R) Mostrar");
+        System.out.println("3- (U) Actualizar");
+        System.out.println("4- (D) Eliminar");
+    }
+
     public static void main(String[] args) {
-        CFlor flor1;  // Instanciando , Existe una variable de tipo CFlor
-        flor1 = new CFlor(); // Creando , recien en este punto existe
+        Boolean flag;
+        do{
+           menuPrincipal();
+           flag = true;
+           int opcion = new Scanner(System.in).nextInt();
+           switch (opcion){
+               case 0:
+                   flag = false;
+                   break;
+               case 1:
+                   System.out.println("Gestionaremos Flores");
+                   menuFlores();
+                   int opcionFlor = new Scanner(System.in).nextInt();
+                   switch (opcionFlor){
+                       case 0: break;
+                       case 1:
+                           CFlor flor = new CFlor();
+                           flor.setNombre(new Scanner(System.in).nextLine());
+                           flor.setAroma(new Scanner(System.in).nextLine());
+                           flor.setColor(new Scanner(System.in).nextLine());
+                           flor.setPrecio(new Scanner(System.in).nextDouble());
+                           floresA.add(flor);
+                           flores.
+                           break;
+                       default:
+                           break;
+                   }
+                   break;
+               default:
+                   break;
+           }
 
-        flor1.setNombre("Orquidea");
- /*       flor1.color = "Violeta";
-        flor1.aroma = "Dulce ligero";
-        flor1.precio = 14.7;*/
-
-        System.out.println("Nombre = " + flor1.getNombre());
-/*        System.out.println("Aroma = " + flor1.aroma);
-        System.out.println("Color = " + flor1.color);
-        System.out.println("Precio = " + flor1.precio);*/
-        System.out.println();
-        if (flor1.getNombre().compareTo("") == 0)
-            System.out.println("Es cadena vacia");
-        else
-            System.out.println("No es cadena vacia");
+        }while(flag);
     }
 }
