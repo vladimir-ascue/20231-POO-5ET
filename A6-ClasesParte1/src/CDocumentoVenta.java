@@ -7,13 +7,8 @@ public class CDocumentoVenta {
     private Date fechaVenta;
     private int idVendedor;
     private int idCliente;
-<<<<<<< HEAD
     private double precioTotal;  // Suma de precios de los detalles de venta
     private double igv; // Al precio total
-=======
-    private double precioTotal;
-    private double igv;
->>>>>>> origin/main
     private double descuento;
     private String estado;
 
