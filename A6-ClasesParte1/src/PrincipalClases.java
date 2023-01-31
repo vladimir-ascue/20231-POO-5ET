@@ -112,12 +112,7 @@ public class PrincipalClases {
 
                            break;
                        case 4:  // Eliminar FLOR
-                           // Implementar el metodo eliminar flor()
-                           System.out.println("  ELIMINAR  FLOR  ");
-                           System.out.println("  0- Retornar al menu CRUD");
-                           System.out.println("  1- Eliminar Segun posicion");
-                           System.out.println("  2- Eliminar Segun Nombre y color");
-                           System.out.println("  3- Eliminar todas las flores del mundo");
+
                            break;
                        default:
 //                           System.out.print("   >> Posición: ");
