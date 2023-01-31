@@ -76,6 +76,8 @@ public class CFlor {
     }
 
     public String formatear(String cadena){
+        cadena.substring(0,15); // Devuelve una subcadena que inicia en 0 y termina en 15
+        cadena.length(); // Devuleve el tamaño de la cadena (Texto)
         return null;
     }
 

@@ -92,13 +92,24 @@ public class PrincipalClases {
                                    break;
                                default: break;
                            }
+                           break;
                        case 3: // Actualizar Flor
                            // Implementar el actualizar una flora
                            // Tomamos como clave primaria (Emulando) Nombre + Color
-                           System.out.println("  ACTUALIZAR FLOR  ");
-                           System.out.println("  0- Retornar al menu CRUD");
-                           System.out.println("  1- Actualizar solo un campo"); // Se requiere sub Menu
-                           System.out.println("  2- Actualizar todo"); // se lee nuevamente los 4 campos
+                           do{
+                               System.out.println("  ACTUALIZAR FLOR  ");
+                               System.out.println("  0- Retornar al menu CRUD");
+                               System.out.println("  1- Actualizar solo un campo"); // Se requiere sub Menu
+                               System.out.println("  2- Actualizar todo"); // se lee nuevamente los 4 campos
+
+                               switch ( 0 ) { // true variable a evaluar
+                                   case 0:
+                                       CFlor f = Flores.get(2); // En f guardo la flor de posicion 3
+                                       f.setColor("Nue valor");
+                                       break;
+                               }
+                           }while( true ); // true se reemplaza por la condicion de finalizacion
+
                            break;
                        case 4:  // Eliminar FLOR
                            // Implementar el metodo eliminar flor()
