@@ -68,15 +68,19 @@ public class CFlor {
         System.out.println(" - Precio: " +this.getPrecio());
     }
     public void mostrarEnLista(){
-        System.out.print(" - Nombre: " + this.getNombre()+"\t");
-        System.out.print("Aroma: " + this.getAroma()+"\t");
-        System.out.print("Color: " + this.getColor()+"\t");
-        System.out.print("Precio: " +this.getPrecio()+"\t\n");
+        // Ejerccio: Corregir el formato (substring) y crear un metodo formatear(String cadena)
+        System.out.print(this.getNombre()+"\t");
+        System.out.print(this.getAroma()+"\t");
+        System.out.print(this.getColor()+"\t");
+        System.out.println(this.getPrecio());
+    }
+
+    public String formatear(String cadena){
+        return null;
     }
 
     public String formateartexto(String a){
         // Tareitas
         return "";
     }
-
 }

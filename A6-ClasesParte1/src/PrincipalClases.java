@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PrincipalClases {
+    // Corregir el error del profe Despues demostrar todas las flores no debe mostrarse el menu Actualizar Flores
     public static List<CFlor> Flores = new ArrayList<CFlor>();
     public static List<CCliente> Clientes = new ArrayList<CCliente>();
     public static List<CVendedor> Vendedores = new ArrayList<CVendedor>();
@@ -17,6 +18,7 @@ public class PrincipalClases {
         System.out.println("2- Gestionar Vendedores.");
         System.out.println("3- Gestionar Clientes.");
         System.out.println("4- Gestionar Documento de venta.");
+        System.out.print("   >> ingrese una opción:");
     }
 
     public static void menuCRUD(){
@@ -25,16 +27,26 @@ public class PrincipalClases {
         System.out.println("2- (R) Mostrar");
         System.out.println("3- (U) Actualizar");
         System.out.println("4- (D) Eliminar");
+        System.out.print("   >> ingrese una opción:");
     }
 
     public static void mostrarFlores(){
+        System.out.println("IDX\tNPMBRE\tAROMA\tCOLOR\tPRECIO");
+        int cont = 0;
         for (CFlor f: Flores) {
+            System.out.print(cont+"\t");
             f.mostrarEnLista();
+            cont++;
         }
     }
 
     public static void main(String[] args) {
         Boolean flag;
+        Flores.add(new CFlor("Rosa","Ducle","Rojo",10));
+        Flores.add(new CFlor("Clavel","Dulce Suave","Blanco",15));
+        Flores.add(new CFlor("Orquidea ","Dulce fuerte","Rosadita",30));
+        Flores.add(new CFlor("Orquidea silvestre","Dulce fuerte","Purpura",50));
+        Flores.add(new CFlor("geraneo","Dulce super suave","Purpura",20));
         do{
            menuPrincipal();
            flag = true;
@@ -81,12 +93,15 @@ public class PrincipalClases {
                                default: break;
                            }
                        case 3: // Actualizar Flor
+                           // Implementar el actualizar una flora
+                           // Tomamos como clave primaria (Emulando) Nombre + Color
                            System.out.println("  ACTUALIZAR FLOR  ");
                            System.out.println("  0- Retornar al menu CRUD");
-                           System.out.println("  1- Actualizar solo un campo");
-                           System.out.println("  2- Actualizar todo");
+                           System.out.println("  1- Actualizar solo un campo"); // Se requiere sub Menu
+                           System.out.println("  2- Actualizar todo"); // se lee nuevamente los 4 campos
                            break;
                        case 4:  // Eliminar FLOR
+                           // Implementar el metodo eliminar flor()
                            System.out.println("  ELIMINAR  FLOR  ");
                            System.out.println("  0- Retornar al menu CRUD");
                            System.out.println("  1- Eliminar Segun posicion");
