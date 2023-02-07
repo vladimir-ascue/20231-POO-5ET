@@ -21,14 +21,14 @@ public class PrincipalClases {
         System.out.print("   >> ingrese una opción:");
     }
 
-    public static void menuCRUD(){
+/*    public static void menuCRUD(){
         System.out.println("0- Salir");
         System.out.println("1- (C) Crear");
         System.out.println("2- (R) Mostrar");
         System.out.println("3- (U) Actualizar");
         System.out.println("4- (D) Eliminar");
         System.out.print("   >> ingrese una opción:");
-    }
+    }*/
 
     public static void mostrarFlores(){
         System.out.println("IDX\tNPMBRE\tAROMA\tCOLOR\tPRECIO");
