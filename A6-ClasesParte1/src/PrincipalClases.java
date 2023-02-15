@@ -40,6 +40,15 @@ public class PrincipalClases {
         }
     }
 
+    public static int menuVentas(){
+        System.out.println("0- Regresar al menu anterior.");
+        System.out.println("1- Registrar nueva venta.");
+        System.out.println("2- Anular venta.");
+        System.out.println("3- Reporte de ventas.");
+        System.out.print("   >> Ingrese una opción: ");
+        return new Scanner(System.in).nextInt();
+    }
+
     public static void main(String[] args) {
         Boolean flag;
         Flores.add(new CFlor("Rosa","Ducle","Rojo",10));
@@ -94,25 +103,53 @@ public class PrincipalClases {
                            }
                            break;
                        case 3: // Actualizar Flor
-                           // Implementar el actualizar una flora
-                           // Tomamos como clave primaria (Emulando) Nombre + Color
-                           do{
-                               System.out.println("  ACTUALIZAR FLOR  ");
-                               System.out.println("  0- Retornar al menu CRUD");
-                               System.out.println("  1- Actualizar solo un campo"); // Se requiere sub Menu
-                               System.out.println("  2- Actualizar todo"); // se lee nuevamente los 4 campos
+                           System.out.println("  Menu Mostrar Flor ");
+                           System.out.println(" 0- Regresar al menu Flores");
+                           System.out.println(" 1- Actualizar un campo");
+                           System.out.println(" 2- Actualizar todo");
+                           System.out.println("   Ingrese una opcion>>  ");
+                           int opcionActualizarFlor = new Scanner(System.in).nextInt();
+                           switch (opcionActualizarFlor) {
+                               case 0:
+                                   System.out.println(" ... Regresando al menu Flores");
+                                   break;
+                               case 1:
+                                   System.out.println("Ingrese la posicion a actualizar: ");
+                                   int pos = new Scanner(System.in).nextInt();
+                                   System.out.println("Ingrese campo que desea actualizar: ");
+                                   String campo = new Scanner(System.in).nextLine();
+                                   flor = (CFlor) Flores.get(pos);
+                                   switch (campo){
+                                       case "nombre":
+                                           System.out.println("Nuevo nombre: ");
+                                           flor.setNombre(new Scanner(System.in).nextLine());
+                                           break;
+                                       case "aroma":
+                                           System.out.println("Nuevo aroma: ");
+                                           flor.setAroma(new Scanner(System.in).nextLine());
+                                           break;
+                                       case "color":
+                                           System.out.println("Nuevo color: ");
+                                           flor.setColor(new Scanner(System.in).nextLine());
+                                           break;
+                                       case "precio":
+                                           System.out.println("Nuevo precio: ");
+                                           flor.setPrecio(new Scanner(System.in).nextDouble());
+                                           break;
+                                   }
+                                   break;
+                               case 2:
 
-                               switch ( 0 ) { // true variable a evaluar
-                                   case 0:
-                                       CFlor f = Flores.get(2); // En f guardo la flor de posicion 3
-                                       f.setColor("Nue valor");
-                                       break;
-                               }
-                           }while( true ); // true se reemplaza por la condicion de finalizacion
-
+                                   break;
+                           }
                            break;
                        case 4:  // Eliminar FLOR
-
+                           System.out.println("  Menu Mostrar Flor ");
+                           System.out.println(" 0- Regresar al menu Flores");
+                           System.out.println(" 1- Eliminar por posicion");
+                           System.out.println(" 2- Eliminar por nombre y color");
+                           System.out.println(" 3- Eliminar todas las flores");
+                           System.out.println("   Ingrese una opcion>>  ");
                            break;
                        default:
 //                           System.out.print("   >> Posición: ");
@@ -121,6 +158,13 @@ public class PrincipalClases {
 //                           break;
                            break;
                    }
+                   break;
+               case 2: // Gestinar Vendedores
+                   break;
+               case 3: // Gestinar Clientes
+                   break;
+               case 4: // Gestinar Documentos de Venta
+                   
                    break;
                default:
                    break;
