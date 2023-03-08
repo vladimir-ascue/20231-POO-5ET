@@ -1,5 +1,3 @@
-package clases;
-
 public class CVendedor {
     private int idVendedor;
     private String tipoDocumento;

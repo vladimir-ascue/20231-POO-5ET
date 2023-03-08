@@ -1,5 +1,3 @@
-package clases;
-
 public class CDetalleVenta {
     private int idDetalleVenta;
     private int idVenta;

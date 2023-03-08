@@ -1,5 +1,3 @@
-package clases;
-
 public class CCliente {
     private int idCliente;
     private String nombres;

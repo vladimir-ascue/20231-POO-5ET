@@ -1,5 +1,3 @@
-package clases;
-
 import java.util.Date;
 
 public class CDocumentoVenta {
