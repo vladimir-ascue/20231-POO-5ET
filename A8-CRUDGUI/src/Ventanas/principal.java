@@ -13,10 +13,10 @@ public class principal extends JFrame {
     private JTextField jtfNombre;
 
     public principal(){
-        setSize(900, 500);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setResizable(false);
-        setLocationRelativeTo(null);
+        setSize(900, 500); // Define el tamaño inicial de la ventana
+        setDefaultCloseOperation(EXIT_ON_CLOSE); // Salir del programa al dar click en la X
+        setResizable(false); // no se podra redimensionar
+        setLocationRelativeTo(null); // Centrado en la pantalla
 
         inicializarComponentes();
         cargarEventos();
@@ -27,7 +27,8 @@ public class principal extends JFrame {
         panel.setLayout(null);
 
         jlbTitulo = new JLabel();
-        jlbTitulo.setText("CRUD GUI");
+        jlbTitulo.setText("CRUD GUI"); // Asingo un valor
+        //jlbTitulo.getText(); // Recupero un valor
         jlbTitulo.setHorizontalAlignment(SwingConstants.CENTER);
         jlbTitulo.setBounds(0, 0, 80, 40); // (posX, posY, ancho, alto)
 
@@ -50,7 +51,6 @@ public class principal extends JFrame {
 
         this.getContentPane().add(panel);
     }
-
     public void cargarEventos(){
         jbtnFlores.addActionListener(new ActionListener() {
             @Override
@@ -60,9 +60,23 @@ public class principal extends JFrame {
                 cf.setTitle("CRUD FLOR");
             }
         });
+
+        jbtnClientes.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                crudCliente cc = new crudCliente();
+                cc.setVisible(true);
+                cc.setTitle("CRUD CLIENTE");
+            }
+        });
+
+        jbtnVendedores.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                crudVendedor cv = new crudVendedor();
+                cv.setVisible(true);
+                cv.setTitle("CRUD VENDEDOR");
+            }
+        });
     }
-    /**/
-
 }
-
-
