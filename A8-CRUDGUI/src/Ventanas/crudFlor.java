@@ -25,33 +25,33 @@ public class crudFlor extends JFrame {
         cargarEventos();
     }
     public void inicializarComponentes(){
-        int margenIzq1 = 10;
-        int margenIzq2 = 110;
-        int anchoCol1 = 80;
-        int anchoCol = 150;
-        int altoStandar = 35;
+        int posX1 = 10;
+        int posX2 = 110;
+        int posY = 35;
+        int ancho = 150;
+        int alto = 35;
 
         panel = new JPanel();
         panel.setLayout(null);
 
         lblTitulo = new JLabel();
         lblTitulo.setText("CRUD FLOR");
-        lblTitulo.setBounds(240, 15, 200, 45);
+        lblTitulo.setBounds((this.getSize().width-ancho)/2, 15, ancho, alto);
 
         lblIdFlor = new JLabel("idFlor");
-        lblIdFlor.setBounds(margenIzq1, altoStandar, 150, 45);
+        lblIdFlor.setBounds(posX1, posY, ancho, alto);
 
         lblNombre = new JLabel("Nombre");
-        altoStandar = altoStandar+20;
-        lblNombre.setBounds(margenIzq1, altoStandar, 50, 45);
+        posY += 55;
+        lblNombre.setBounds(posX1, posY, ancho, alto);
 
         jtfnombre = new JTextField();
         jtfnombre.setText("Tu nombrecito aqui");
-        altoStandar = altoStandar+20;
-        jtfnombre.setBounds(margenIzq2, altoStandar, 120, 45);
+        jtfnombre.setBounds(posX2, posY, ancho, alto);
 
         jbtGuardar.setText("Guardar");
-        jbtGuardar.setBounds( margenIzq2, altoStandar,60, 35);
+        posY += 55;
+        jbtGuardar.setBounds( posX2, posY, ancho, alto);
 
         panel.add(lblTitulo);
         panel.add(lblIdFlor);
