@@ -1,7 +1,7 @@
 package Clases;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 import conexion.conector;
 
@@ -19,10 +19,14 @@ public class CFlor {
     // MÉTODOS
     // M. contructores
     public CFlor(){
-        nombre = new Scanner(System.in).nextLine();
-        aroma = new Scanner(System.in).nextLine();
-        color = new Scanner(System.in).nextLine();
-        precio = new Scanner(System.in).nextDouble();
+        this.idflor = 0;
+        this.nombre=null;
+        this.aroma=null;
+        this.color=null;
+        this.precio=0;
+        this.estado = null;
+        this.fcreacion = null;
+        this.stock = 0;
     }
 
     public CFlor(String pNombre, String pAroma, String pColor, double pPrecio, int pstock, Date pfcreacion, String pestado){
@@ -129,21 +133,46 @@ public class CFlor {
     }
     public void save(){
         conector c = new conector();
-
         String consulta = "call crearFlor('"
                           + this.nombre+"','"
                           + this.aroma +"','"
                           + this.color + "', "
                           + this.precio + ","
                           + this.stock + ","
-                          + new SimpleDateFormat("yyyy-mm-dd hh:mm:ss").format(new Date()) + ", '"
+                          + "'2023-12-15 12:45:15'" + ", '"
                           + this.estado + "')";
         System.out.println(consulta);
         c.ejecutarProcedimientoSinDatos(consulta);
     }
-    /**/
 
+    public static List<List<String>> mostrarFlores(String pIdFlor) {
+        List<List<String>> data = null;
+        try {
+            conector conexion = new conector();
+            String consulta = "";
+            if (pIdFlor.compareTo("") == 0) {
+                consulta = "call listarFlores();";
+            } else {
+                consulta = "select * from TFlor where idFlor = '" + pIdFlor + "';";
+            }
+            data = conexion.ejecutarProcedimientoConDatos(consulta);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return data;
+    }
 
+    public void update(){
+        conector c = new conector();
+        String consulta = "call actualizarFlor("
+                + this.idflor+",'"
+                + this.nombre+"','"
+                + this.aroma +"','"
+                + this.color + "', "
+                + this.precio + ","
+                + this.stock + ",'"
+                + this.fcreacion + "', '"
+                + this.estado + "')";
+        System.out.println(consulta);
+    }
 }
-
-
