@@ -10,7 +10,4 @@ public class crudCliente extends JFrame {
         setLocationRelativeTo(null);
     }
     /**/
-
 }
-
-

@@ -1,5 +1,7 @@
 package Ventanas;
 
+import Clases.CFlor;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,16 +12,15 @@ public class principal extends JFrame {
     private JButton jbtnFlores;
     private JButton jbtnClientes;
     private JButton jbtnVendedores;
-    private JTextField jtfNombre;
 
     public principal(){
-        setSize(900, 500); // Define el tamaño inicial de la ventana
-        setDefaultCloseOperation(EXIT_ON_CLOSE); // Salir del programa al dar click en la X
-        setResizable(false); // no se podra redimensionar
-        setLocationRelativeTo(null); // Centrado en la pantalla
+        setSize(900, 500); // Dimesiones en pixeles
+        setDefaultCloseOperation(EXIT_ON_CLOSE); //(para cerrar el programa)
+        setResizable(false); // No se podra redimensional (true para que si se pueda)
+        setLocationRelativeTo(null); // Centramos la ventana
 
-        inicializarComponentes();
-        cargarEventos();
+        inicializarComponentes(); //
+        cargarEventos(); //
     }
 
     public void inicializarComponentes() {
@@ -27,22 +28,22 @@ public class principal extends JFrame {
         panel.setLayout(null);
 
         jlbTitulo = new JLabel();
-        jlbTitulo.setText("CRUD GUI"); // Asingo un valor
-        //jlbTitulo.getText(); // Recupero un valor
+        jlbTitulo.setText("CRUD GUI");
         jlbTitulo.setHorizontalAlignment(SwingConstants.CENTER);
         jlbTitulo.setBounds(0, 0, 80, 40); // (posX, posY, ancho, alto)
 
         jbtnFlores = new JButton();
-        jbtnFlores.setBounds(10, 40, 120, 70);
-        jbtnFlores.setText("Gestionar\nFlores");
+        jbtnFlores.setText("Gest. Flores");
+        jbtnFlores.setBounds(50, 45, 70, 45);
 
         jbtnClientes = new JButton();
-        jbtnClientes.setBounds(140, 40, 120, 70);
-        jbtnClientes.setText("Gestionar\nClientes");
+        jbtnClientes.setText("Gest. Flores");
+        jbtnClientes.setBounds(150, 45, 70, 45);
 
         jbtnVendedores = new JButton();
-        jbtnVendedores.setBounds(280, 40, 120, 70);
-        jbtnVendedores.setText("Gestionar\nVendedores");
+        jbtnVendedores.setText("Gest. Flores");
+        jbtnVendedores.setBounds(240, 45, 70, 45);
+
 
         panel.add(jlbTitulo);
         panel.add(jbtnFlores);
@@ -51,11 +52,12 @@ public class principal extends JFrame {
 
         this.getContentPane().add(panel);
     }
+
     public void cargarEventos(){
         jbtnFlores.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                crudFlor cf = new crudFlor();
+                crudFlor cf = new crudFlor(new CFlor());
                 cf.setVisible(true);
                 cf.setTitle("CRUD FLOR");
             }
@@ -75,7 +77,7 @@ public class principal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 crudVendedor cv = new crudVendedor();
                 cv.setVisible(true);
-                cv.setTitle("CRUD VENDEDOR");
+                cv.setTitle("CRUD VENDEDORES");
             }
         });
     }

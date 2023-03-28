@@ -10,7 +10,4 @@ public class crudVendedor extends JFrame {
         setLocationRelativeTo(null);
     }
     /**/
-
 }
-
-
